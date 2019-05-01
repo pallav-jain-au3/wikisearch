@@ -1,31 +1,42 @@
-body{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   background: #BADA55;
   flex-direction: column;
-
-}
-.search-box{
-  padding : 5rem 0;
 }
 
-  .articles a
-  {
+.search-box {
+  padding: 5rem 0;
+}
+
+.articles a {
   text-decoration: none;
   color: black;
-  }
-  li{
-    list-style-type: none;
-    background: white;
-  }
-.btn{
-  margin-bottom: 5px;
 }
-.search{
+
+li {
+  list-style-type: none;
+  background: white;
+}
+
+.btn {
+  text-decoration: none;
+  font-size: 1.5rem;
+  border: 1px solid black;
+  padding: 2px 5px;
+  background:
+}
+
+.btn:hover {
+  background: #4e4e4e;
+  color: white;
+}
+
+.search {
   width: 20rem;
   height: 2rem;
   font-size: 2rem;
-
+  margin-top: 1rem;
 }
