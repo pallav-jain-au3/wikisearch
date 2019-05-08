@@ -1,22 +1,17 @@
-function checkForUserInput() {
+function addUserInput() {
   const searchInput = document.querySelector('.search');
   searchInput.addEventListener('change', userInputAndHtml);
   searchInput.addEventListener('keyup', userInputAndHtml);
 }
 
 function userInputAndHtml() {
-  if (this.value) {
+  let userInput = this.value
+  if (userInput) {
     html = "";
-    userInput(this.value);
+    let wikiAPI = "https://en.wikipedia.org/w/api.php?action=opensearch&&search=" + userInput;
+    getDataFromAPI(wikiAPI);
   }
   document.querySelector('.articles').innerHTML = "";
-}
-
-function userInput(value) {
-
-  let userInput = value;
-  let wikiAPI = "https://en.wikipedia.org/w/api.php?action=opensearch&&search=" + userInput;
-  getDataFromAPI(wikiAPI);
 }
 
 function getDataFromAPI(url) {
@@ -41,5 +36,5 @@ function displayInHtml(heading, aboutArticle, link) {
 }
 
 
-checkForUserInput();
+addUserInput();
 let html = "";
